@@ -1,8 +1,18 @@
 .box-profile {
-   position: absolute;
-   left: 50%;
-   top: 50%;
-   transform: translate(-50%, -50%);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    color: #fff;
+    display: flex;
+    padding: 10px;
+    width: 50%;
+    gap: 10px;
+    align-items: center;
+    transition: 1s;
+    justify-content: space-around;
+    flex-shrink: 0;
 }
 
 .box-profile.active {
@@ -21,40 +31,25 @@ body {
 
 .bg-bio {
     height: 100vh;
-     
     border-radius: 0;
 }
 
-.box-profile {
-    opacity:  0;
-    color: #fff;
-    display: flex;
-    padding: 10px;
-    width: 50%;
-    gap: 10px;
-    align-items: center;
-    transition: 1s;
-    justify-content: space-around;
-}
-
 .content-profile h3 {
-  letter-spacing: 1.2px;
+    letter-spacing: 1.2px;
 }
 
 .content-profile h5 {
-  color: gray;
-  transform: translateY(-10px);
- 
+    color: gray;
+    transform: translateY(-10px);
 }
 
 .content-profile {
     text-align: start;
     font-size: 20px;
-    
- 
+    gap: 20px;
 }
 
-main  {
+main {
     height: 100vh;
 }
 
@@ -65,12 +60,10 @@ main  {
     transform: translate(-50%, -50%);
     width: 70%;
     display: flex;
- 
     justify-content: space-between;
-    
 }
 
-#arrows button{
+#arrows button {
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -87,4 +80,47 @@ main  {
 #arrows button:hover {
     background-color: rgb(255, 255, 255);
     color: #000000;
+}
+
+ 
+@media (max-width: 992px) {
+    body {
+        overflow: auto;
+    }
+
+    main {
+        height: auto;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .box-profile {
+        justify-content: center;
+        transition: none;
+        position: static !important;
+        transform: none !important;
+        opacity: 1 !important;
+        width: 90%;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 30px;
+        display: flex !important;
+        margin: 0 auto;
+    }
+
+    .content-profile {
+        text-align: center;
+    }
+
+    .img-profile img {
+        width: 200px;
+        height: 200px;
+    }
+
+    #arrows {
+        display: none;
+    }
 }
