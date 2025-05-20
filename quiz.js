@@ -72,7 +72,7 @@ function enviarRespostas() {
 
   const participante = JSON.parse(localStorage.getItem("participante"));
 
-  fetch("http://localhost:3000/api/verificar", {
+  fetch("api/verificar", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ respostas })
