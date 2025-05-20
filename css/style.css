@@ -221,3 +221,32 @@ nav a {
   align-items: center;
   gap: 8px; /* espaço entre ícone e texto */
 }
+
+
+main section p {
+  line-height: 2;
+}
+
+.fonte {
+  text-align: center;
+}
+
+.fonte h3 {
+  font-size: 25px;
+  letter-spacing: 2px;
+}
+
+.fonte .link a {
+  text-decoration: none;
+  color: hsl(202, 100%, 77%);
+  font-size: 18px;
+  line-height: 2;
+  transition: 0.5s;
+  padding: 15px;
+}
+
+.fonte .link a:hover {
+ 
+  color: hsl(202, 93%, 55%);
+ 
+}
